@@ -5,7 +5,7 @@ class AnswerGenerator {
         const result = [];
         for (let i = 0; i < 4; i++) {
             const randomNumber = parseInt(Math.random() * digists.length);
-            
+
             result.push((digists.splice(randomNumber, 1))[0])
         }
         return result;
