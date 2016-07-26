@@ -1,6 +1,7 @@
 'use strict';
 
 const CompareNumber = require('../src/compare-number');
+const AnswerGenerator = require('../src/answer-generator');
 
 describe('CompareNumber', ()=> {
     const inputs = '1234';
@@ -31,5 +32,18 @@ describe('CompareNumber', ()=> {
         const expectAnswer = '1A1B';
         const answer = new CompareNumber(inputs, systems).compareNumber();
         expect(answer).toEqual(expectAnswer);
+    })
+});
+
+describe('AnswerGenerator', ()=> {
+    it('it should get number', ()=> {
+
+        const isUnique = (item, index, array)=> {
+            return array.lastIndexOf(item) === index
+        };
+
+        const number = AnswerGenerator.getNumber();
+        expect(number.length).toEqual(4);
+        expect(number.every(isUnique)).toBeTruthy();
     })
 });
