@@ -1,15 +1,11 @@
 'use strict';
 
 class CompareNumber {
-    constructor(inputs, systems) {
-        this.inputs = inputs;
-        this.systems = systems;
-    }
 
-    compareNumber() {
+    static compareNumber(inputs,systems) {
 
-        let inputsArrays = this.inputs.split('');
-        let systemsArrays = this.systems.split('');
+        let inputsArrays = inputs.split('');
+        let systemsArrays = systems.split('');
 
         const getBCount = ()=> {
             return inputsArrays.map((inputsArray, index)=>
