@@ -2,7 +2,7 @@
 
 class CompareNumber {
 
-    static compareNumber(inputs,systems) {
+    static compareNumber(inputs, systems) {
 
         let inputsArrays = inputs.split('');
         let systemsArrays = systems.split('');
